@@ -17,7 +17,7 @@ const MenuLink = styled(Link)(({ theme }) => ({
 
 const Topper: React.FC<{ height: number }> = ({ height }) => {
     return (
-        <Drawer variant="permanent" open anchor="top">
+        <Drawer variant="persistent" open anchor="top">
             <Paper sx={{ height: `${height}px` }}>
                 <Container maxWidth={"xl"} sx={{display: 'flex', alignItems: 'center', height: 1}}>
                     <Stack direction={'row'} width={1} alignItems={'center'}>
