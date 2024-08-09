@@ -9,7 +9,7 @@ export class UsersController {
     @Post('/create')
     async createUser(@Body() createUserDto: CreateUserDto) {
         if (await this.usersService.isExist(createUserDto.username)) {
-            throw new HttpException('Already exists', HttpStatus.BAD_REQUEST)
+            throw new HttpException('Already exists', HttpStatus.FORBIDDEN)
         }
 
         await this.usersService.createUser(createUserDto.username, createUserDto.password)
